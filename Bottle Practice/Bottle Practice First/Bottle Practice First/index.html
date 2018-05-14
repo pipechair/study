@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <title>To Do App</title>
+</head>
+<body>
+    <h1>Welcome to ToDo list</h1>
+
+    <form name="todo" method="POST" action="/enter">
+        <input type="text" name="todo_list" required /><br />
+        <input type="submit" value="追加" />
+    </form>
+
+
+    <form method="POST" action="/delete">
+        % for todo in todo_list:
+        <input type="checkbox" name="finished" value="{{todo[0]}}">{{todo[0]}}<br>
+        % end
+        <input type="submit" value="チェックしたリストを消去">
+    </form>
+
+
+</body>
+</html>
