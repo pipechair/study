@@ -15,7 +15,7 @@
 
     <form method="POST" action="/delete">
         % for todo in todo_list:
-        <input type="checkbox" name="finished" value="{{todo[0]}}">{{todo[0]}}<br>
+        <input type="checkbox" name="finished" value="{{todo[0]}}">{{todo[1]}}<br>
         % end
         <input type="submit" value="チェックしたリストを消去">
     </form>
