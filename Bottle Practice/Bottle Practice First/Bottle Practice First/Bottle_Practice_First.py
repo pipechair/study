@@ -1,4 +1,5 @@
 #coding:utf-8
+#from bottle import run,route,template,redirect,request,post
 from bottle import run,route,template,redirect,request,post
 import sqlite3
 
@@ -21,7 +22,7 @@ def delete():
     conn=sqlite3.connect("todo.db")
     c=conn.cursor()
 
-    delete="delete from todo_list where todo='{0}'".format(request.POST.getunicode("finished"))
+    delete="delete from todo_list where id={0}".format(request.POST.getunicode("finished"))
     c.execute(delete)
     conn.commit()
     return redirect("/")
@@ -30,7 +31,7 @@ def delete():
 def save_todo(todo):
     conn= sqlite3.connect('todo.db')
     c= conn.cursor()
-    insert="insert into todo_list(todo) values('{0}')".format(todo)
+    insert="insert into todo_list(todo,status) values('{0}',0)".format(todo)
     c.execute(insert)
     conn.commit()
 
