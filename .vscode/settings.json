@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.py": "python"
+    },
+    "python.pythonPath": "/usr/local/bin/python3"
+}
