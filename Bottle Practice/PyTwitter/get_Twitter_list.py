@@ -17,10 +17,10 @@ def get_search():
     #ツイッターAPIを取得する
     #OAuth_ORG.py を作成し、それぞれのキーを返すメソッドを用意すること。
     #git には加えてない（秘密鍵が漏れるの怖いので）
-    CK = OAuth_ORG.OAuth_CK()
-    CS = OAuth_ORG.OAuth_CS()
-    AT = OAuth_ORG.OAuth_AT()
-    AS = OAuth_ORG.OAuth_AS()
+    CK = OAuth_ORG.CK
+    CS = OAuth_ORG.CS
+    AT = OAuth_ORG.AT
+    AS = OAuth_ORG.AS
     twitter = OAuth1Session(CK, CS, AT, AS)
 
     terms = ['えみつん','アルバム','-RT']
