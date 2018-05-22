@@ -62,7 +62,7 @@ def get_search():
                     #             tables_rows = tables_rows + "<td>" + str(v3) + "</td>"
         tables_rows = tables_rows + "</tr>"
     ret_text = template("top",query=query,tables=tables_rows,org_data=org_data)
-    return ret_text        
+    return ret_text
 
 if __name__ == "__main__":
     # localhost:8080 で公開するように実行
