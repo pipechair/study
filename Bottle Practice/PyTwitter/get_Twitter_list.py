@@ -23,7 +23,7 @@ def get_search():
     AS = OAuth_ORG.AS
     twitter = OAuth1Session(CK, CS, AT, AS)
 
-    terms = ['えみつん','アルバム','-RT']
+    terms = ['from:anisama','-RT']
     search_str=" AND ".join(terms)
     query = search_str
     params = {
@@ -38,7 +38,20 @@ def get_search():
     result = []
     if req.status_code == 200:
         tweets = json.loads(req.text)
+        print('====')
+        print(tweets)
+        print('====')
         result = tweets['statuses']
+        print(str(result[0]['text']))
+        print(str(result[0]['user']['name']))
+        print(str(result[0]['user']['screen_name']))
+        for i in result:
+            print('---====')
+            
+            for j,k in i.items():
+                print(str(j) + ':' + str(k))
+            print('---====')
+
     else:
         print("ERROR!: %d" % req.status_code)
         result = None
