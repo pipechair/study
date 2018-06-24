@@ -262,3 +262,5 @@ __pycache__/
 .vscode/settings.json
 Bottle Practice/PyTwitter/OAuth_ORG.py
 Bottle Practice/TwitterLog_Getter/OAuth_ORG.py
+sample.db
+Bottle Practice/TwitterLog_Getter/sample.db
